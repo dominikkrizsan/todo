@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.5s;
+}
+
+body {
+    background-color: #cccccc;
+}
+
+.main-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 0 20px;
+}
+
+.task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 100%;
+    background-color: #e7e7e7;
+    padding: 10px 30px 10px 12px;
+    border-radius: 10px;
+}
+
+.task-container-iner {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.edit {
+    background-color: #ccc;
+    padding: 4px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.edit:hover {
+    color: gray;
+}
+
+.add-t-btn {
+    padding: 8px 12px;
+    background-color: aqua;
+    border-radius: 10px;
+    border: none;
+}
+
+.add-t-btn:hover {
+    background-color: #00dbdb;
+    color: black;
+}
+
+.card-header-self {
+    background-color: #333;
+}
