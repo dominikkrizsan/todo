@@ -36,7 +36,6 @@
     </div>
 @endsection
 
-
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 
@@ -49,7 +48,6 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            //var formData = $("#taskForm").serialize();
             $.ajax({
                     method    :   "POST",
                     url     :   "/task/store",
@@ -60,9 +58,11 @@
 
                     success: function(res) { 
                         if(res.status == "success") {
-                            $("#result").html("<div class='alert alert-success'>" + res.message + "</div>");
+                            var result = $("#result").html("<div class='alert alert-success mt-3'>" + res.message + "</div>");
+                            setTimeout(result, 2000)
+                            window.location.reload();
                          }
-
+                         
                         else if(res.status == "failed") {
                             $("#result").html("<div class='alert alert-danger'>" + res.message + "</div>");
                             console.log('prob')

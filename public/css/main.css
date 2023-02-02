@@ -7,6 +7,11 @@
     font-size: 1.1rem;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     color: #333;
@@ -72,3 +77,4 @@ body {
 .card-header-self {
     background-color: #333;
 }
+

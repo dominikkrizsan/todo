@@ -21,10 +21,12 @@ use App\Http\Controllers\TaskController;
 
 Auth::routes();
 
-
+Route::get('/', function () {
+    return redirect('/home');
+});
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', "App\Http\Controllers\TaskController@index")->name('home');
+    Route::get('/home', "App\Http\Controllers\TaskController@index")->name('home');
     Route::get("task/create", "App\Http\Controllers\TaskController@create");
     Route::post('task/store', 'App\Http\Controllers\TaskController@saveTask');
     Route::delete('task/{id}', 'App\Http\Controllers\TaskController@destroy')->name('task.destroy');

@@ -50,7 +50,6 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
-            //var formData = $("#taskForm").serialize();
             $.ajax({
                     method    :   "POST",
                     url     :   "/task/update/"+$('#task_id').val(),
