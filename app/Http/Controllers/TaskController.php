@@ -44,9 +44,9 @@ class TaskController extends Controller
         $task->task_title = $request->title;
         $task->description = $request->description;
         if ($task->update()) {
-            return response()->json(['status' => 'success', 'message' => 'Task created successfully']);
+            return response()->json(['status' => 'success', 'message' => 'Task updated successfully']);
         } else {
-            return response()->json(['status' => 'failed', 'message' => 'Failed to create task']);
+            return response()->json(['status' => 'failed', 'message' => 'Failed to update task']);
         }
     }
 
@@ -54,7 +54,7 @@ class TaskController extends Controller
     {
         Task::find($id)->delete($id);
         return response()->json([
-            'success' => 'Task deleted successfully!'
+            'status' => 'Task deleted successfully!'
         ]);
     }
 }

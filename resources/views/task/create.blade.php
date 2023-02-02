@@ -58,9 +58,8 @@
 
                     success: function(res) { 
                         if(res.status == "success") {
-                            var result = $("#result").html("<div class='alert alert-success mt-3'>" + res.message + "</div>");
-                            setTimeout(result, 2000)
-                            window.location.reload();
+                            $("#result").html("<div class='alert alert-success mt-3'>" + res.message + "</div>");
+                            setTimeout(window.location.href="/", 2000);
                          }
                          
                         else if(res.status == "failed") {

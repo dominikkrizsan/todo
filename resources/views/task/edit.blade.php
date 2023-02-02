@@ -60,7 +60,8 @@
 
                     success: function(res) { 
                         if(res.status == "success") {
-                            $("#result").html("<div class='alert alert-success'>" + res.message + "</div>");
+                            $("#result").html("<div class='alert alert-success mt-2'>" + res.message + "</div>");
+                            window.location.href="/";
                          }
 
                         else if(res.status == "failed") {

@@ -38,7 +38,6 @@
                 },
                 success: function (){
                     window.location.reload();
-                    console.log("it Works");
                 }
             });
     
